@@ -1,17 +1,11 @@
 const sumAll = function(x, y) {
     let sum = 0;
+    let highNumber = Math.max(x, y);
+    let lowNumber = Math.min(x, y);
     if (x < 0 || y < 0 || !Number.isInteger(x) || !Number.isInteger(y)) return "ERROR"
-    if (x < y) {
-        for (x; x <= y; x++){
-            sum = sum + x;
-        }
+    for (lowNumber; lowNumber <= highNumber; lowNumber++) {
+        sum += lowNumber;
     }
-    else if (x > y) {
-        for (y; y <= x; y++){
-            sum = sum + y;
-        }
-  }
-
     return sum
 };
 
